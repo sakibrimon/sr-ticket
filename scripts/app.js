@@ -60,7 +60,7 @@ for (const seat of allSeats) {
                     break;
                 }
             }
-            couponField.children[0].children[0].value = "";
+            // couponField.children[0].children[0].value = "";
             couponField.classList.remove("hidden");
             couponMsg.innerText = "";
         }
@@ -84,6 +84,7 @@ for (const seat of allSeats) {
         } else {
             phoneInput.setAttribute("disabled", "disabled");
             phoneInput.setAttribute("title", "Select a seat first.");
+            nextBtn.setAttribute("disabled", "disabled");
         }
     });
 }
