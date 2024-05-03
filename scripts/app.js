@@ -70,7 +70,7 @@ for (const seat of allSeats) {
             phoneInput.addEventListener('input', function () {
                 const phoneNumber = phoneInput.value;
 
-                // A very basic phone number validation, took AI Assistance.
+                // A very basic phone number validation
                 const isValidPhoneNumber = /^01\d{9}$/.test(phoneNumber);
 
                 // nextBtn.disabled = !isValidPhoneNumber;
