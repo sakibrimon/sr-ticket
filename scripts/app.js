@@ -7,9 +7,21 @@ const couponBtn = document.getElementById("coupon-apply");
 const couponInput = document.getElementById("coupon-input");
 const couponField = document.getElementById("coupon-field");
 const couponMsg = document.getElementById("coupon-msg");
-const phoneInput = document.getElementById("phone");
+const phone = document.getElementById("phone");
 const nextBtn = document.getElementById("next");
 const allSeats = document.getElementsByClassName("seat");
+function nextBtnDisabilityToggler() {
+    // A very basic phone number validation
+    const isValidPhoneNumber = /^01\d{9}$/.test(phone.value);
+    if (seatList.children.length > 0 && isValidPhoneNumber === true) {
+        nextBtn.removeAttribute("disabled");
+    } else {
+        nextBtn.setAttribute("disabled", "disabled");
+    }
+}
+phone.addEventListener('input', function () {
+    nextBtnDisabilityToggler();
+});
 for (const seat of allSeats) {
     seat.addEventListener("click", function () {
         if (!Array.from(seat.classList).includes("bg-prime")) {
@@ -60,32 +72,10 @@ for (const seat of allSeats) {
                     break;
                 }
             }
-            // couponField.children[0].children[0].value = "";
             couponField.classList.remove("hidden");
             couponMsg.innerText = "";
         }
-        if (seatList.children.length > 0) {
-            phoneInput.removeAttribute("disabled");
-            phoneInput.removeAttribute("title");
-            phoneInput.addEventListener('input', function () {
-                const phoneNumber = phoneInput.value;
-
-                // A very basic phone number validation
-                const isValidPhoneNumber = /^01\d{9}$/.test(phoneNumber);
-
-                // nextBtn.disabled = !isValidPhoneNumber;
-
-                if (isValidPhoneNumber) {
-                    nextBtn.removeAttribute("disabled");
-                } else {
-                    nextBtn.setAttribute("disabled", "disabled");
-                }
-            });
-        } else {
-            phoneInput.setAttribute("disabled", "disabled");
-            phoneInput.setAttribute("title", "Select a seat first.");
-            nextBtn.setAttribute("disabled", "disabled");
-        }
+        nextBtnDisabilityToggler();
     });
 }
 couponBtn.addEventListener("click", function () {
