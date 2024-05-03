@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="shortcut icon" href="images/bus-icon.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.10.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        prime: '#1DD100',
+                    }
+                }
+            }
+        }
+    </script>
+    <title>SR-Ticket</title>
+</head>
+
+<body class="inter-font text-lg#">
+    <!-- navbar -->
+    <header class="raleway-font">
+        <nav class="mt-12 w-[90%] lg:w-[81%] container mx-auto">
+            <div class="navbar bg-base-100">
+                <div class="navbar-start">
+                    <div class="dropdown">
+                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </div>
+                        <ul tabindex="0"
+                            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                            <li><a>Home</a></li>
+                            <li><a>About</a></li>
+                            <li><a>Destination</a></li>
+                            <li><a>Search</a></li>
+                        </ul>
+                    </div>
+                    <a class="btn btn-ghost text-4xl font-extrabold" href="index.html">SR-Ticket</a>
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                    <ul class="menu menu-horizontal px-1">
+                        <li><a>Home</a></li>
+                        <li><a>About</a></li>
+                        <li><a>Destination</a></li>
+                        <li><a>Search</a></li>
+                    </ul>
+                </div>
+                <div class="navbar-end">
+                    <a class="btn border-[#1DD10066] text-prime font-bold bg-[#1DD1001A] w-[130px]">Bus<img
+                            src="images/bus-icon.png" alt=""></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="inter-font">
+        <!-- banner section -->
+        <section class="mt-7 w-[90%] lg:w-[80%] container mx-auto">
+            <div class="hero min-h-[550px] rounded-[32px]" style="background-image: url(images/banner.png);">
+                <div class="hero-overlay# bg-opacity-60#"></div>
+                <div class="hero-content text-center text-neutral-content text-white">
+                    <div class="max-w-3xl">
+                        <h1 class="mb-5 text-[64px] font-bold raleway-font">End-to-End Travel with</h1>
+                        <h1 class="mb-5 text-[64px] font-bold text-prime raleway-font">SR-Ticket</h1>
+                        <p class="mb-5">Say goodbye to long queues and last-minute rushes! Whether it's a daily commute
+                            or a weekend getaway, we make booking your bus tickets a breeze.</p>
+                        <a href="#ticket">
+                            <button class="btn bg-prime border-0 raleway-font font-bold w-[170px]">Buy Tickets</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- success section -->
+        <section class="mt-7 lg:mt-0 flex flex-col lg:flex-row items-center lg:justify-center lg:-translate-y-1/2">
+            <div class="w-[308px] min-h-[138px] bg-white border-b-4 border-prime rounded-3xl">
+                <div class="p-8 flex items-center">
+                    <img src="images/people.png" alt="">
+                    <div class="pl-4">
+                        <h2 class="font-bold text-4xl">500K+</h2>
+                        <p class="text-[#03071299]">Registered users</p>
+                    </div>
+                </div>
+            </div>
+            <div class="w-[308px] min-h-[138px] bg-white border-b-4 border-prime rounded-3xl my-6 lg:my-0 lg:mx-6">
+                <div class="p-8 flex items-center">
+                    <img src="images/ticket-cupon.png" alt="">
+                    <div class="pl-4">
+                        <h2 class="font-bold text-4xl">1.7 lacs</h2>
+                        <p class="text-[#03071299]">Tickets sold</p>
+                    </div>
+                </div>
+            </div>
+            <div class="w-[308px] min-h-[138px] bg-white border-b-4 border-prime rounded-3xl">
+                <div class="p-8 flex items-center">
+                    <img src="images/stoppage.png" alt="">
+                    <div class="pl-4">
+                        <h2 class="font-bold text-4xl">80K+</h2>
+                        <p class="text-[#03071299]">Rental partners</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- offers section -->
+        <section class="mt-[51px] w-[80%] container mx-auto">
+            <h2 class="raleway-font font-bold text-[40px] text-center">Best offers for you</h2>
+            <div class="mt-12 flex flex-col items-center gap-6 lg:flex-row lg:justify-between">
+                <div class="w-[98%] lg:w-[49%] min-h-[220px] bg-[#FFBF0F] rounded-3xl flex flex-col lg:flex-row">
+                    <div class="pt-[52px] lg:pl-[52px] min-[1400px]:pr-[52px] text-center lg:text-start">
+                        <h2 class="font-black text-2xl min-[1400px]:text-[40px] text-[#030712CC]">15% OFF</h2>
+                        <p class="font-semibold text-base min-[1400px]:text-xl text-[#030712CC]">on your next purchase
+                        </p>
+                        <p class="font-medium text-sm min-[1400px]:text-lg text-[#03071280]">use by April 2024</p>
+                    </div>
+                    <img class="ml-[52px]# mr-[26px]# hidden lg:inline" src="images/cupon-devider.png" alt="">
+                    <div class="py-[66px] min-[1400px]:pl-[26px] raleway-font text-center">
+                        <h3 class="font-bold text-xl min-[1400px]:text-[32px]">NEW15</h3>
+                        <p class="font-medium text-base min-[1400px]:text-lg text-[#03071266]">Coupon Code</p>
+                    </div>
+                </div>
+                <div class="w-[98%] lg:w-[49%] min-h-[220px] bg-[#F78C9C] rounded-3xl flex flex-col lg:flex-row">
+                    <div class="pt-[52px] lg:pl-[52px] min-[1400px]:pr-[40px] text-center lg:text-start">
+                        <h2 class="font-black text-2xl min-[1400px]:text-[40px] text-[#030712CC]">20% OFF</h2>
+                        <p class="font-semibold text-base min-[1400px]:text-xl text-[#030712CC]">on your next purchase
+                        </p>
+                        <p class="font-medium text-sm min-[1400px]:text-lg text-[#03071280]">use by April 2024</p>
+                    </div>
+                    <img class="ml-[40px]# mr-[20px]# hidden lg:inline" src="images/cupon-devider.png" alt="">
+                    <div class="py-[66px] min-[1400px]:pl-[20px] raleway-font text-center">
+                        <h3 class="font-bold text-xl min-[1400px]:text-[32px]">Couple 20</h3>
+                        <p class="font-medium text-base min-[1400px]:text-lg text-[#03071266]">Coupon Code</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center">
+                <button class="btn btn-outline mt-[62px] text-prime">See All Offers</button>
+            </div>
+        </section>
+        <!-- ticket section -->
+        <section id="ticket"
+            class="mt-[120px] bg-[#F7F8F8] min-h-screen border-t-2 border-prime rounded-t-[88px] pb-[120px]">
+            <div class="mt-[120px] text-center w-1/2 mx-auto">
+                <h2 class="raleway-font font-bold text-[40px]">SR-Ticket</h2>
+                <p class="mt-6 text-[#03071299]">Say goodbye to long queues and last-minute rushes! Whether it's a daily
+                    commute or a weekend getaway, we make booking your bus tickets a breeze.</p>
+            </div>
+            <!-- ticket -->
+            <div
+                class="mt-12 w-[80%] min-h-[418px] mx-auto bg-white rounded-3xl flex flex-col lg:flex-row gap-8 lg:gap-0">
+                <div class="p-8 lg:pb-0 lg:pr-0 lg:w-[70%]">
+                    <div class="flex flex-col gap-6 lg:flex-row lg:justify-between items-center">
+                        <div class="flex items-center">
+                            <img class="pt-3" src="images/bus-logo.png" alt="">
+                            <div class="pl-[14px]">
+                                <h2 class="raleway-font font-bold text-[32px]">Greenline Paribahan</h2>
+                                <p class="text-[#03071299]">Coach-009-WEB | AC_Business</p>
+                            </div>
+                        </div>
+                        <button class="btn ml-[234px]# text-prime bg-[#1DD10026]"><img src="images/seat-green.png"
+                                alt=""><span id="seats-left">8</span> Seats left</button>
+                    </div>
+                    <div class="mt-6 min-h-[258px] bg-[#F7F8F8] rounded-3xl p-8">
+                        <p
+                            class="pb-6 flex justify-between items-center raleway-font font-semibold border-b border-dashed">
+                            <span class="text-[#03071299]">Route</span><span class="text-[#030712]">Dhaka -
+                                Sylhet</span>
+                        </p>
+                        <p
+                            class="py-6 flex justify-between items-center raleway-font font-semibold border-b border-dashed">
+                            <span class="text-[#03071299]">Departure Time</span><span class="text-[#030712]">9:00
+                                PM</span>
+                        </p>
+                        <div class="mt-6 flex justify-between items-center text-[#030712CC]">
+                            <button class="btn btn-wide no-animation max-w-[28%]">Boarding Point - Dhaka</button>
+                            <button class="btn btn-wide no-animation max-w-[28%]">Dropping Point - Sylhet</button>
+                            <button class="btn btn-wide no-animation max-w-[28%]">ETA - 5 Hour(s)</button>
+                        </div>
+                    </div>
+                </div>
+                <img class="ml-8# mr-[22px]# hidden lg:inline" src="images/info-devider.png" alt="">
+                <div class="ml-[22px] mb-8 lg:mb-0 flex flex-col justify-center items-center raleway-font">
+                    <img src="images/fare.png" alt="">
+                    <h2 class="font-bold text-[32px]">550 Taka</h2>
+                    <h3 class="font-semibold text-2xl text-[#03071299]">Per Seat</h3>
+                </div>
+            </div>
+            <!-- seat selection -->
+            <div class="mt-6 w-[80%] min-h-screen mx-auto bg-white rounded-3xl flex flex-col lg:flex-row p-8">
+                <!-- left part -->
+                <div class="w-full lg:w-[60%] text-[#03071280] font-medium pr-0 lg:pr-8 lg:border-r-2 border-dashed">
+                    <h3
+                        class="raleway-font font-semibold text-2xl text-[#030712] pb-4 border-b border-dashed border-[#03071233]">
+                        Select Your Seat</h3>
+                    <p class="mt-4 pb-4 border-b border-dashed border-[#03071233] flex justify-between items-center">
+                        <span class="flex items-center"><img class="mr-2" src="images/seat-gray.png"
+                                alt="">Available</span><span class="flex items-center text-prime font-medium"><img
+                                class="mr-2" src="images/seat-green-filled.png" alt="">Selected</span>
+                    </p>
+                    <div class="my-6 flex justify-end">
+                        <div class="w-1/5 h-14 rounded-xl bg-[#0307121A] flex justify-center items-center">
+                            <img src="images/wheel.png" alt="">
+                        </div>
+                    </div>
+                    <div class="my-6 flex items-center">
+                        <span class="select-none">A</span>
+                        <div
+                            class="ml-[2%] w-1/5 h-14 rounded-xl bg-[#F7F8F8] flex justify-center items-center cursor-pointer seat">
+                            <span class="select-none">A1</span>
+                        </div>
+                        <div
+                            class="ml-[4%] w-1/5 h-14 rounded-xl bg-[#F7F8F8] flex justify-center items-center cursor-pointer seat">
+                            <span class="select-none">A2</span>
+                        </div>
+                        <div
+                            class="ml-[8%] w-1/5 h-14 rounded-xl bg-[#F7F8F8] flex justify-center items-center cursor-pointer seat">
+                            <span class="select-none">A3</span>
+                        </div>
+                        <div
+                            class="ml-[4%] w-1/5 h-14 rounded-xl bg-[#F7F8F8] flex justify-center items-center cursor-pointer seat">
+                            <span class="select-none">A4</span>
+                        </div>
+                    </div>
+                    <div class="my-6 flex items-center">
+                        <span class="select-none">B</span>
+                        <div
+                            class="ml-[2%] w-1/5 h-14 rounded-xl bg-[#F7F8F8] flex justify-center items-center cursor-pointer seat">
+                            <span class="select-none">C1</span>
+                        </div>
+                        <div
+                            class="ml-[4%] w-1/5 h-14 rounded-xl bg-[#F7F8F8] flex justify-center items-center cursor-pointer seat">
+                            <span class="select-none">B2</span>
+                        </div>
+                        <div
+                            class="ml-[8%] w-1/5 h-14 rounded-xl bg-[#F7F8F8] flex justify-center items-center cursor-pointer seat">
+                            <span class="select-none">B3</span>
+                        </div>
+                        <div
+                            class="ml-[4%] w-1/5 h-14 rounded-xl bg-[#F7F8F8] flex justify-center items-center cursor-pointer seat">
+                            <span class="select-none">B4</span>
+                        </div>
+                    </div>
+                    <div class="my-6 flex items-center">
+                        <span class="select-none">C</span>
+                        <div
+                            class="ml-[2%] w-1/5 h-14 rounded-xl bg-[#F7F8F8] flex justify-center items-center cursor-pointer seat">
+                            <span class="select-none">C1</span>
+                        </div>
+                        <div
+                            class="ml-[4%] w-1/5 h-14 rounded-xl bg-[#F7F8F8] flex justify-center items-center cursor-pointer seat">
+                            <span class="select-none">C2</span>
+                        </div>
+                        <div
+                            class="ml-[8%] w-1/5 h-14 rounded-xl bg-[#F7F8F8] flex justify-center items-center cursor-pointer seat">
+                            <span class="select-none">C3</span>
+                        </div>
+                        <div
+                            class="ml-[4%] w-1/5 h-14 rounded-xl bg-[#F7F8F8] flex justify-center items-center cursor-pointer seat">
+                            <span class="select-none">C4</span>
+                        </div>
+                    </div>
+                    <div class="my-6 flex items-center">
+                        <span class="select-none">D</span>
+                        <div
+                            class="ml-[2%] w-1/5 h-14 rounded-xl bg-[#F7F8F8] flex justify-center items-center cursor-pointer seat">
+                            <span class="select-none">D1</span>
+                        </div>
+                        <div
+                            class="ml-[4%] w-1/5 h-14 rounded-xl bg-[#F7F8F8] flex justify-center items-center cursor-pointer seat">
+                            <span class="select-none">D2</span>
+                        </div>
+                        <div
+                            class="ml-[8%] w-1/5 h-14 rounded-xl bg-[#F7F8F8] flex justify-center items-center cursor-pointer seat">
+                            <span class="select-none">D3</span>
+                        </div>
+                        <div
+                            class="ml-[4%] w-1/5 h-14 rounded-xl bg-[#F7F8F8] flex justify-center items-center cursor-pointer seat">
+                            <span class="select-none">D4</span>
+                        </div>
+                    </div>
+                    <div class="my-6 flex items-center">
+                        <span class="select-none">E</span>
+                        <div
+                            class="ml-[2%] w-1/5 h-14 rounded-xl bg-[#F7F8F8] flex justify-center items-center cursor-pointer seat">
+                            <span class="select-none">E1</span>
+                        </div>
+                        <div
+                            class="ml-[4%] w-1/5 h-14 rounded-xl bg-[#F7F8F8] flex justify-center items-center cursor-pointer seat">
+                            <span class="select-none">E2</span>
+                        </div>
+                        <div
+                            class="ml-[8%] w-1/5 h-14 rounded-xl bg-[#F7F8F8] flex justify-center items-center cursor-pointer seat">
+                            <span class="select-none">E3</span>
+                        </div>
+                        <div
+                            class="ml-[4%] w-1/5 h-14 rounded-xl bg-[#F7F8F8] flex justify-center items-center cursor-pointer seat">
+                            <span class="select-none">E4</span>
+                        </div>
+                    </div>
+                    <div class="my-6 flex items-center">
+                        <span class="select-none">F</span>
+                        <div
+                            class="ml-[2%] w-1/5 h-14 rounded-xl bg-[#F7F8F8] flex justify-center items-center cursor-pointer seat">
+                            <span class="select-none">F1</span>
+                        </div>
+                        <div
+                            class="ml-[4%] w-1/5 h-14 rounded-xl bg-[#F7F8F8] flex justify-center items-center cursor-pointer seat">
+                            <span class="select-none">F2</span>
+                        </div>
+                        <div
+                            class="ml-[8%] w-1/5 h-14 rounded-xl bg-[#F7F8F8] flex justify-center items-center cursor-pointer seat">
+                            <span class="select-none">F3</span>
+                        </div>
+                        <div
+                            class="ml-[4%] w-1/5 h-14 rounded-xl bg-[#F7F8F8] flex justify-center items-center cursor-pointer seat">
+                            <span class="select-none">F4</span>
+                        </div>
+                    </div>
+                    <div class="my-6 flex items-center">
+                        <span class="select-none">G</span>
+                        <div
+                            class="ml-[2%] w-1/5 h-14 rounded-xl bg-[#F7F8F8] flex justify-center items-center cursor-pointer seat">
+                            <span class="select-none">G1</span>
+                        </div>
+                        <div
+                            class="ml-[4%] w-1/5 h-14 rounded-xl bg-[#F7F8F8] flex justify-center items-center cursor-pointer seat">
+                            <span class="select-none">G2</span>
+                        </div>
+                        <div
+                            class="ml-[8%] w-1/5 h-14 rounded-xl bg-[#F7F8F8] flex justify-center items-center cursor-pointer seat">
+                            <span class="select-none">G3</span>
+                        </div>
+                        <div
+                            class="ml-[4%] w-1/5 h-14 rounded-xl bg-[#F7F8F8] flex justify-center items-center cursor-pointer seat">
+                            <span class="select-none">G4</span>
+                        </div>
+                    </div>
+                    <div class="my-6 flex items-center">
+                        <span class="select-none">H</span>
+                        <div
+                            class="ml-[2%] w-1/5 h-14 rounded-xl bg-[#F7F8F8] flex justify-center items-center cursor-pointer seat">
+                            <span class="select-none">H1</span>
+                        </div>
+                        <div
+                            class="ml-[4%] w-1/5 h-14 rounded-xl bg-[#F7F8F8] flex justify-center items-center cursor-pointer seat">
+                            <span class="select-none">H2</span>
+                        </div>
+                        <div
+                            class="ml-[8%] w-1/5 h-14 rounded-xl bg-[#F7F8F8] flex justify-center items-center cursor-pointer seat">
+                            <span class="select-none">H3</span>
+                        </div>
+                        <div
+                            class="ml-[4%] w-1/5 h-14 rounded-xl bg-[#F7F8F8] flex justify-center items-center cursor-pointer seat">
+                            <span class="select-none">H4</span>
+                        </div>
+                    </div>
+                    <div class="my-6 flex items-center">
+                        <span class="select-none">I</span>
+                        <div
+                            class="ml-[2%] w-1/5 h-14 rounded-xl bg-[#F7F8F8] flex justify-center items-center cursor-pointer seat">
+                            <span class="select-none">I1</span>
+                        </div>
+                        <div
+                            class="ml-[4%] w-1/5 h-14 rounded-xl bg-[#F7F8F8] flex justify-center items-center cursor-pointer seat">
+                            <span class="select-none">I2</span>
+                        </div>
+                        <div
+                            class="ml-[8%] w-1/5 h-14 rounded-xl bg-[#F7F8F8] flex justify-center items-center cursor-pointer seat">
+                            <span class="select-none">I3</span>
+                        </div>
+                        <div
+                            class="ml-[4%] w-1/5 h-14 rounded-xl bg-[#F7F8F8] flex justify-center items-center cursor-pointer seat">
+                            <span class="select-none">I4</span>
+                        </div>
+                    </div>
+                    <div class="my-6 flex items-center">
+                        <span class="select-none">J</span>
+                        <div
+                            class="ml-[2%] w-1/5 h-14 rounded-xl bg-[#F7F8F8] flex justify-center items-center cursor-pointer seat">
+                            <span class="select-none">J1</span>
+                        </div>
+                        <div
+                            class="ml-[4%] w-1/5 h-14 rounded-xl bg-[#F7F8F8] flex justify-center items-center cursor-pointer seat">
+                            <span class="select-none">J2</span>
+                        </div>
+                        <div
+                            class="ml-[8%] w-1/5 h-14 rounded-xl bg-[#F7F8F8] flex justify-center items-center cursor-pointer seat">
+                            <span class="select-none">J3</span>
+                        </div>
+                        <div
+                            class="ml-[4%] w-1/5 h-14 rounded-xl bg-[#F7F8F8] flex justify-center items-center cursor-pointer seat">
+                            <span class="select-none">J4</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- right part -->
+                <div class="lg:pl-8 grow">
+                    <h3
+                        class="mb-6 raleway-font font-semibold text-2xl text-[#030712] pb-4 border-b border-dashed border-[#03071233]">
+                        Select Your Seat</h3>
+                    <div class="bg-[#F7F8F8] rounded-xl p-8">
+                        <p
+                            class="flex justify-between items-center font-medium pb-4 border-b border-dashed border-[#03071233]">
+                            <span>Seat <span id="seat-count" class="badge bg-prime text-white">0</span></span><span
+                                class="w-[60%] flex justify-between"><span>Class</span><span>Price</span></span>
+                        </p>
+                        <!-- selected seats with price -->
+                        <div id="seat-list" class="mt-4 border-b border-[#03071233]">
+                            <!--                            <p class="flex justify-between items-center font-medium text-[#03071299] pb-4">-->
+                            <!--                                <span>C2</span>-->
+                            <!--                                <span-->
+                            <!--                                    class="w-[60%] flex justify-between">-->
+                            <!--                                    <span>Economy</span>-->
+                            <!--                                    <span>550</span>-->
+                            <!--                                </span>-->
+                            <!--                            </p>-->
+                            <!--                            <p class="flex justify-between items-center font-medium text-[#03071299] pb-4">-->
+                            <!--                                <span>D4</span>-->
+                            <!--                                <span-->
+                            <!--                                    class="w-[60%] flex justify-between">-->
+                            <!--                                    <span>Economy</span>-->
+                            <!--                                    <span>550</span>-->
+                            <!--                                </span>-->
+                            <!--                            </p>-->
+                        </div>
+                        <!-- total price -->
+                        <p class="mt-4 flex justify-between items-center font-medium"><span>Total Price</span><span>BDT
+                                <span id="price">0</span></span></p>
+                        <!-- coupon field -->
+                        <div class="mt-4">
+                            <div id="coupon-field" class="flex justify-between items-center bg-white rounded-xl">
+                                <div class="w-[79%]">
+                                    <input id="coupon-input" type="text" placeholder="Have any coupon?"
+                                        class="input w-full max-w-xs# max-w-full border-0 outline-0 focus:outline-none placeholder:text-sm" />
+                                </div>
+                                <div class="w-[21%]">
+                                    <button id="coupon-apply"
+                                        class="btn btn-xs bg-prime text-white rounded-lg w-[80px]# h-[40px]#"
+                                        disabled="disabled">Apply</button>
+                                </div>
+                            </div>
+                            <p id="coupon-msg" class="mt-4 text-prime"></p>
+                        </div>
+                        <!-- grand total -->
+                        <p class="mt-6 flex justify-between items-center font-medium"><span>Grand Total</span><span>BDT
+                                <span id="net-price">0</span></span></p>
+                    </div>
+                    <!-- the form -->
+                    <div id="theform">
+                        <!--                        <form action="">-->
+                        <label class="mt-6 form-control w-full max-w-full">
+                            <div class="label">
+                                <span class="label-text font-semibold">Passenger Name</span>
+                            </div>
+                            <input type="text" placeholder="Enter your name"
+                                class="input input-bordered w-full max-w-full" />
+                        </label>
+                        <label class="mt-6 form-control w-full max-w-full">
+                            <div class="label">
+                                <span class="label-text font-semibold">Valid 11 Digit Phone Number*</span>
+                            </div>
+                            <input type="tel" placeholder="Enter your phone number" name="" id="phone"
+                                class="input input-bordered w-full max-w-full" required disabled="disabled"
+                                title="Select a seat first.">
+                        </label>
+                        <label class="mt-6 form-control w-full max-w-full">
+                            <div class="label">
+                                <span class="label-text font-semibold">Email ID</span>
+                            </div>
+                            <input type="email" placeholder="Enter your email id"
+                                class="input input-bordered w-full max-w-full" />
+                        </label>
+                        <input id="next" type="submit" value="Next"
+                            class="mt-6 btn btn-block bg-prime text-white font-extrabold text-xl"
+                            onclick="my_modal_1.showModal()" disabled="disabled">
+                        <!--                        </form>-->
+                    </div>
+                    <p class="mt-6 flex justify-around text-[#03071299]"><a class="link" href="">Terms and
+                            Conditions</a><a class="link" href="">Cancellation Policy</a></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Open the modal using ID.showModal() method -->
+    <!-- <button class="btn" onclick="my_modal_1.showModal()">open modal</button> -->
+    <dialog id="my_modal_1" class="modal modal-bottom sm:modal-middle">
+        <div class="modal-box text-xl py-14 lg:w-1/2 max-w-5xl rounded-xl">
+            <img class="mb-9 mx-auto" src="images/success.png" alt="">
+            <!-- <h3 class="font-bold text-lg">Hello!</h3> -->
+            <h3 class="font-bold text-2xl text-[#27AE60] text-center roboto-bold">SUCCESS</h3>
+            <!-- <p class="py-4">Press ESC key or click the button below to close</p> -->
+            <p class="py-4 text-[#4A4A4A] text-center roboto-medium">Thank you for Booking Our Bus Seats.
+                <br>
+                We are working hard to find the best service and deals for you.
+            </p>
+            <p class="text-[#4A4A4A] text-center roboto-light">Shortly you will find a confirmation in your email.</p>
+            <div class="modal-action flex justify-center">
+                <form method="dialog">
+                    <!-- if there is a button in form, it will close the modal -->
+                    <!-- <button class="btn">Close</button> -->
+                    <button class="btn btn-wide bg-[#27AE60] text-white roboto-regular font-semibold rounded-[32px]"><a
+                            href="">Continue</a></button>
+                </form>
+            </div>
+        </div>
+    </dialog>
+
+    <footer class="min-h-[457px] bg-[#030712] pt-[120px] px-[135px] text-white">
+        <div class="flex justify-between items-center pb-12 border-b-[1.5px] border-dashed border-[#FFFFFF4D]">
+            <!-- left part -->
+            <div class="w-[30%]">
+                <h2 class="font-extrabold text-[32px] raleway-font">SR-Ticket</h2>
+                <p class="mt-4 text-[#FFFFFFCC] w-[374px]#">SR-Ticket is a digital platform to make your daily commuting
+                    better.</p>
+            </div>
+            <!-- right part -->
+            <div class="flex flex-col items-end">
+                <p class="mb-5 font-semibold text-xl raleway-font text-end">Download our app</p>
+                <button class="btn btn-outline text-white h-14"><img src="images/playstore.png" alt="">
+                    <div class="flex flex-col items-start">
+                        <span>GET IT ON</span>
+                        <span>Google Play</span>
+                    </div>
+                </button>
+            </div>
+        </div>
+        <div class="mt-8 flex flex-col lg:flex-row lg:justify-between items-center">
+            <span class="text-[#FFFFFFB3]">@all rights reserved, SR-Ticket services limited. 2024</span>
+            <span class="mt-8 lg:mt-0 flex flex-col lg:flex-row items-center gap-8">
+                <a class="link link-hover">Terms & conditions</a>
+                <a class="link link-hover">Return & refund policy</a>
+                <a class="link link-hover">Privacy policy</a>
+            </span>
+        </div>
+    </footer>
+
+    <script src="scripts/utility.js"></script>
+    <script src="scripts/app.js"></script>
+</body>
+
+</html>
