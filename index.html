@@ -45,7 +45,7 @@
                             <li><a>Search</a></li>
                         </ul>
                     </div>
-                    <a class="btn btn-ghost text-4xl font-extrabold" href="index.html">SR-Ticket</a>
+                    <a class="btn btn-ghost text-4xl font-extrabold hidden sm:inline-block" href="index.html">SR-Ticket</a>
                 </div>
                 <div class="navbar-center hidden lg:flex">
                     <ul class="menu menu-horizontal px-1">
@@ -512,25 +512,25 @@
     </dialog>
 
     <footer class="min-h-[457px] bg-[#030712] pt-[120px] px-[135px] text-white">
-        <div class="flex justify-between items-center pb-12 border-b-[1.5px] border-dashed border-[#FFFFFF4D]">
+        <div class="flex flex-col sm:flex-row gap-5 justify-between items-center pb-12 border-b-[1.5px] border-dashed border-[#FFFFFF4D]">
             <!-- left part -->
-            <div class="w-[30%]">
-                <h2 class="font-extrabold text-[32px] raleway-font">SR-Ticket</h2>
+            <div class="sm:w-[30%] text-center sm:text-left">
+                <h2 class="font-extrabold text-base sm:text-xl md:text-[32px] raleway-font">SR-Ticket</h2>
                 <p class="mt-4 text-[#FFFFFFCC] w-[374px]#">SR-Ticket is a digital platform to make your daily commuting
                     better.</p>
             </div>
             <!-- right part -->
-            <div class="flex flex-col items-end">
-                <p class="mb-5 font-semibold text-xl raleway-font text-end">Download our app</p>
+            <div class="flex flex-col items-center sm:items-end">
+                <p class="mb-5 font-semibold text-xl raleway-font text-center sm:text-end">Download our app</p>
                 <button class="btn btn-outline text-white h-14"><img src="images/playstore.png" alt="">
-                    <div class="flex flex-col items-start">
+                    <div class="hidden sm:flex flex-col items-start">
                         <span>GET IT ON</span>
                         <span>Google Play</span>
                     </div>
                 </button>
             </div>
         </div>
-        <div class="mt-8 flex flex-col lg:flex-row lg:justify-between items-center">
+        <div class="mt-8 flex flex-col lg:flex-row lg:justify-between items-center text-center">
             <span class="text-[#FFFFFFB3]">@all rights reserved, SR-Ticket services limited. 2024</span>
             <span class="mt-8 lg:mt-0 flex flex-col lg:flex-row items-center gap-8">
                 <a class="link link-hover">Terms & conditions</a>
